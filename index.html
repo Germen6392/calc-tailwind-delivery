@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+        <meta charset="UTF-8">
+        <title>Practicas con Javascript</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<h1 class="mx-2 my-4 p-2 text-center">Precios Base de Envío</h1>
+<div class="container mx-auto grid grid-cols-4 bg-stone-200 ">
+    <div class="card bg-teal-200 grid grid-cols-2 col-span-1">
+        <h3 class="titulo-dato1 grid justify-self-center col-span-2">Entrega Normal</h3>
+        <span class="moneda grid justify-self-center col-span-1">$</span><p class="dato grid justify-self-center col-span-1 hover:bg-sky-700 cursor-pointer px-6">135</p>
+    </div>
+    <div class="card bg-neutral-900 text-white grid grid-cols-2 col-span-1col-span-1">
+        <h3 class="titulo-dato2 grid justify-self-center col-span-2">Entrega Nocturna</h3>
+        <span class="moneda grid justify-self-center col-span-1">$</span><p class="dato grid justify-self-center col-span-1 hover:bg-sky-700 cursor-pointer px-6">155</p>
+    </div>
+    <div class="card bg-green-300 grid grid-cols-2 col-span-1 col-span-1">
+        <h3 class="titulo-dato3 grid justify-self-center col-span-2">Entrega Domingo</h3>
+        <span class="moneda grid justify-self-center col-span-1">$</span><p class="dato grid justify-self-center col-span-1 hover:bg-sky-700 cursor-pointer px-6">165</p>
+    </div>
+    <div class="card bg-violet-500 grid grid-cols-2 col-span-1 col-span-1">
+        <h3 class="titulo-dato4 grid justify-self-center col-span-2">Entrega Especial</h3>
+        <span class="moneda grid justify-self-center col-span-1">$</span><p class="dato grid justify-self-center col-span-1 hover:bg-sky-700 cursor-pointer px-6">205</p>
+    </div>
+</div>
+
+<div class="contenedor-resultado container mx-auto grid grid-cols-3 gap-4 bg-stone-200 content-center">
+<h3 class="titulo-resultado grid justify-items-center p-2 col-span-1 text-center">EL VALOR SELECCIONADO ES:$ <span id="valor-resultado" class="grid justify-items-center p-2 col-span-1">-</span></h3>
+</div>
+<h1 class="mx-2 my-4 p-2 text-center">Grupos de Desempeño</h1>
+<section class="container mx-auto grid grid-cols-3 bg-stone-200 border-2 border-solid border-black-500 ">
+    <div class="border-2 border-black-500">
+        <h3 class="titulo-grupo">Grupo 1</h3>
+        <p class="grupo">El valor adicional es de $<span class="valor-grupo hover:bg-sky-700 cursor-pointer px-6">14</span></p>
+    </div>
+    <div>
+        <h3 class="titulo-grupo">Grupo 2</h3>
+        <p class="grupo">El valor adicional es de $<span class="valor-grupo hover:bg-sky-700 cursor-pointer px-6">12</span></p>
+    </div>
+    <div>
+        <h3 class="titulo-grupo">Grupo 3</h3>
+        <p class="grupo">El valor adicional es de $<span class="valor-grupo hover:bg-sky-700 cursor-pointer px-6">8</span></p>
+    </div>
+</section>
+<div class="contenedor-grupo contenedor-resultado container grid grid-cols-3 gap-4 bg-stone-200 justify-content-center">
+<h3 class="titulo-seleccion-grupo grid justify-items-center p-2 col-span-1 text-center">EL VALOR SELECCIONADO ES:$ <span id="seleccion-grupo"class="grid justify-items-center p-2 col-span-1">-</span></h3>
+</div>
+
+<header class="header mx-2 my-4 p-2 text-center flex flex-col justify-content-center align-items-center">
+            <h1 class="titulo-principal my-4 flex justify-items-center align-items-center px-4 mx-auto">Cálculos con Javascript</h1>
+            <h2 class="titulo-form flex justify-items-center align-items-center px-4 mx-auto">Agrega estos datos</h2>
+        </header>
+        <form class="container flex flex-col justify-center lg:flex-row my-4" action="">
+            <div class="flex flex-row flex-wrap mx-auto gap-3 mb-4">
+                <label for="">Distancia al Local</label>
+                <input class="flex text-end" id="num1" type="number" placeholder="Agrega la distancia en km">
+            </div>
+            <div class="flex flex-row flex-wrap mx-auto gap-3 mb-4">    
+                <label for="">Distancia al Cliente</label>
+                <input class="flex text-end"id="num2" type="number" placeholder="Agrega la distancia en km">
+            </div>
+<button class="bg-blue-500 sm:bg-orange-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2" id="sumar">Calcular</button>
+        </form>
+<div class="contenedor-total">
+<h3 class="titulo-total">El envío tiene una ganancia total de: </h3>
+<span id="total">$ -</span>
+</div>
+<script src="app.js"></script>        
+</body>
+</html>
